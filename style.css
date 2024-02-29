@@ -1,0 +1,737 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-position{
+    position:fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 20px;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.557);
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 20px;
+    width: 80%;
+    top: 0;
+    background-color:rgb(255, 255, 255);
+}
+
+.nav2 ul{
+    list-style-type: none;
+    display: flex;
+    position: relative;
+}
+
+.nav2 li{
+    padding-right: 20px;
+    font-size: large;
+    transition: 0.5s;
+    text-decoration-line: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: crimson;
+    cursor: pointer;
+    position: relative;
+}
+.side1{
+    position: relative;
+}
+.side1 h1{
+    position: absolute;
+}
+.side1 h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+}
+.side1 h1:nth-child(2){
+    color: rgb(0, 0, 0);
+    animation: animate 4s ease-in-out infinite;
+}
+.nav1{
+    position: relative;
+}
+.nav1 h1{
+        font-family: "Protest Riot", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 45px;
+        margin-top: -15px;
+        color: rgb(0, 0, 0);
+        position: absolute;
+}
+.nav1 h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px crimson;
+}
+.nav1 h1:nth-child(2){
+    color: crimson;
+    animation: animate 4s ease-in-out infinite;
+}
+.nav2 ul li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 35%;
+    transform: translateX(-50%);
+    background: crimson;
+    transition: width 0.3s;
+}
+.nav2 ul li:hover::after{
+    width: 50%;
+}
+
+@keyframes animate{
+    0%,100%{
+        clip-path: polygon(0% 48%, 17% 47%, 33% 50%, 47% 56%, 60% 63%, 77% 63%, 91% 58%, 100% 52%, 100% 100%, 0 100%);
+    }
+    50%{
+        clip-path: polygon(0 54%, 10% 62%, 24% 65%, 37% 64%, 50% 57%, 61% 48%, 79% 43%, 100% 43%, 100% 100%, 0 100%);
+    } 
+}
+
+
+.bar{
+    display: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.bar:active{
+    transform: matrix(0,2,2,0,10,10);
+}
+
+.side2{
+    cursor: pointer;
+    transition: 1s;
+}
+
+.side2:active{
+    transform: rotate(-360deg);
+}
+
+.side-navbar{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(255, 93, 126);
+    position: fixed;
+    left: -110%;
+    transition: 2s;
+    z-index: 101;
+}
+
+.side-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-nav h1{
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 20px;
+}
+
+.side-nav i{
+    margin: 20px;
+    margin-top: 25px;
+}
+
+.side-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-menu li{
+    list-style-type: none;
+    margin-top: 40px;
+    opacity: 0.7;
+    transition: 1s;
+    text-decoration-line: none;
+    font-size: large;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+
+
+.side-menu li:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.header{
+    position:absolute;
+    display: flex;
+    margin-top: 15%;
+    left: 15%;
+    font-size: 30px;
+    z-index: 99;
+}
+
+.head1 h1{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.head1 button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to left,rgba(220, 20, 60, 0.653),crimson);
+    margin-top: 40px;
+    width: 15%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.534) 2px 2px 8px;
+}
+
+.head1 button:hover{
+    box-shadow: black 4px 4px 10px;
+}
+
+.head2 img{
+    width: 450px; 
+    height: 300px;
+    position: absolute;
+    right: 1px;
+    left: 670px;
+    top: 110px;
+}
+
+.icon{
+    position: absolute;
+    top: 90%;
+    left: 14%;
+}
+
+.icon a{
+    text-decoration-line: none;
+}
+
+.icon i{
+    margin: 13px;
+    font-size: 28px;
+    color: rgb(134, 0, 27);
+}
+
+.about{
+    position: absolute;
+    top: 110%;
+    left: 45%;
+    height: 650px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.about h1{
+    color: rgb(206, 20, 57);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+.about1 img{
+    height: 500px;
+    width: 500px;
+}
+
+.about-txt{
+    position: absolute;
+    top: 115%;
+    left: 15%;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+.about2 h2{
+    margin-bottom: 20px;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.about2 p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.skills{
+    position: absolute;
+    top: 270%;
+    left: 47%;
+    height: 650px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.skills h1{
+    color: rgb(206, 20, 57);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.skills1{
+    position: absolute;
+    top: 290%;
+    left: 15%;
+}
+.skills1 h2{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.skills1 p{
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.percentage{
+    position: absolute;
+    top: 300%;
+    left: 15%;
+}
+
+.percentage .html,.css,.js,.python,.sql,.django,.github{
+    width: 510px;
+    height: 45px;
+    background-color: white;
+    margin-top: 35px;
+    box-shadow: rgba(0, 0, 0, 0.543) 4px 6px 9px;
+    border-radius: 10px;
+}
+.html{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.css{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+.js{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+.python{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+.django{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+.sql{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+.sql img{
+    width: 35px;
+    height: 35px;
+}
+.github{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.html p{
+    padding-left: 72%;
+}
+.css p{
+    padding-left: 74%;
+}
+.js p{
+    padding-left: 76%;
+}
+.python p{
+    padding-left: 68%;
+}
+.django p{
+    padding-left: 69%;
+}
+.sql p{
+    padding-left: 75%;
+}
+.github p{
+    padding-left: 70%;
+}
+
+.skill-img{
+    margin-top: -90px;
+    width: 500px;
+    height: 700px;
+}
+
+.html:hover{
+    background-color: transparent;
+}
+.css:hover{
+    background-color: transparent;
+}
+.js:hover{
+    background-color: transparent;
+}
+.python:hover{
+    background-color: transparent;
+}
+.django:hover{
+    background-color: transparent;
+}
+.sql:hover{
+    background-color: transparent;
+}
+.github:hover{
+    background-color: transparent;
+}
+
+.html1,.css1,.js1,.python1,.django1,.sql1,.github1{
+    width: 10px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.html1:hover{
+    background-color: rgba(220, 20, 60, 0.596);
+    animation-timing-function: linear;
+    width: 470px;
+    color: white;
+}
+.css1:hover{
+    background-color: rgba(220, 20, 60, 0.596);
+    animation-timing-function: linear;
+    width: 470px;
+    color: white;
+}
+.js1:hover{
+    background-color: rgba(220, 20, 60, 0.596);
+    animation-timing-function: linear;
+    width: 400px;
+    color: white;
+}
+.python1:hover{
+    background-color: rgba(220, 20, 60, 0.596);
+    animation-timing-function: linear;
+    width: 470px;
+    color: white;
+}
+.django1:hover{
+    background-color: rgba(220, 20, 60, 0.596);
+    animation-timing-function: linear;
+    width: 400px;
+    color: white;
+}
+.sql1:hover{
+    background-color: rgba(220, 20, 60, 0.596);
+    animation-timing-function: linear;
+    width: 400px;
+    color: white;
+}
+.github1:hover{
+    background-color: rgba(220, 20, 60, 0.596);
+    animation-timing-function: linear;
+    width: 300px;
+    color: white;
+}
+
+.percentage span{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.work{
+    position: absolute;
+    top: 190%;
+    left: 47%;
+    height: 650px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.work h1{
+    color: rgb(206, 20, 57);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.work1{
+    position: absolute;
+    top: 200%;
+    left: 30%;
+}
+.college{
+    margin-top: 10%;
+}
+.course{
+    margin-top: 10%;
+}
+.work1 h2{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.work1 p{
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.contact{
+    position: absolute;
+    top: 460%;
+    left: 47%;
+    height: 650px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.contact h1{
+    color: rgb(206, 20, 57);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.contact2{
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -70px;
+}
+.contact2 input{
+    margin: 20px;
+    width: 160%;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(140, 5, 32, 0.655) 3px 5px 8px;
+}
+.contact2 textarea{
+    width: 160%;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(140, 5, 32, 0.655) 3px 5px 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.contact input{
+    height: 30px;
+}
+.contact button{
+    margin-top: 30px;
+    margin-left: 90%;
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(to left, rgba(220, 20, 60, 0.667),rgb(220, 20, 60));
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.534) 2px 2px 8px;
+}
+.contact button:hover{
+    box-shadow: rgba(0, 0, 0, 0.833) 4px 4px 10px;
+}
+
+.footer{
+    position: absolute;
+    top: 550%;
+    height: 35%;
+    width: 100%;
+    background-color: rgb(174, 10, 43);
+}
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.foot h2{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: white;
+}
+
+.foot1{
+    position: absolute;
+    left: 43%;
+    top: 50%;
+}
+
+.foot1 a{
+    text-decoration-line: none;
+    color: white;
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+
+@media screen and (max-width:600px){
+    .navbar{
+        height: 45px;
+    }
+    .nav2 ul{
+        display: none;
+    }
+    .nav1 h1{
+        font-size: 55px;
+    }
+    .bar{
+        display: block;
+        font-size: 50px;
+    }
+    .side-nav h1{
+        font-size: 55px;
+    }
+    .side-menu li{
+        list-style-type: none;
+        margin-top: 80px;
+        opacity: 0.7;
+        transition: 1s;
+        text-decoration-line: none;
+        font-size: 40px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        cursor: pointer;
+    }
+    .side-menu li:hover{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    .side2{
+        font-size: 50px;
+    }
+    .header{
+        margin-top: 70%;
+        left: 10%;
+        font-size: 40px;
+        z-index: 99;
+    }
+    .head1 button{
+        width: 50%;
+    }
+    .head2 img{
+        width: 500px; 
+        height: 400px;
+        top: 820px;
+        left: 5%;
+    }
+    .icon{
+        top: 200%;
+        left: 14%;
+    }
+    .about{
+        top: 220%;
+        left: 65%;
+        height: 650px;
+        font-size: 20px;
+    }
+    .about-txt{
+        flex-direction: column;
+        top: 230%;
+    }
+    .about2 p{
+        font-size: 20px;
+    }
+    .about2 h2{
+        font-size: 40px;
+    }
+    .work{
+        top: 350%;
+        font-size: 20px;
+    }
+    .work1{
+        top: 370%;
+        margin-left: -50px;
+    }
+    .work1 h2{
+        font-size: 40px;
+        width: 450px;
+    }
+    .work1 p{
+        font-size: 20px;
+    }
+    .course{
+        margin-top: 90px;
+    }
+    .skills{
+        font-size: 20px;
+        top: 470%;
+        left: 65%;
+    }
+    .skills1{
+        top: 485%;
+        left: 10%;
+    }
+    .skills1 h2{
+        font-size: 40px;
+    }
+    .skills1 p{
+        font-size: 20px;
+    }
+    .percentage{
+        top: 515%;
+        left: 5%;
+    }
+    .contact{
+        top: 685%;
+        left: 60%;
+    }
+    .contact1{
+        font-size: 20px;
+    }
+    .footer{
+        top: 775%;
+        width: 155%;
+    }
+    .foot1{
+        left: 30%;
+    }
+}
